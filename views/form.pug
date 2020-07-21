@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 #{title}
+
+    form(action="/new" method="POST")
+        h2 name:
+        input(type="textarea", name="name", value="")
+        h2 message:
+        textarea(name="message", cols="50", rows="10", value="")
+        br
+        button(type="submit") submit

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+
+  a(href="/new") add new message
+  //iterate through messages and display
+  for message in messages 
+      h2 #{message.text}
+      p by #{message.user} at #{message.added} 
